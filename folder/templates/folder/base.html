@@ -88,5 +88,31 @@
         </div>
     </div>
 </nav>
+
+
+<div class='container'>
+    {% block content2 %}
+    {% endblock content2 %}
+</div>
+{% include 'folder/base/js.html' %}
+<script>
+        $(document).ready(function(){
+          {% block jquery %}{% endblock %}
+        })
+        $(document).ready(function(){
+            $("#myBtn").click(function(){
+                $("#myModal").modal();
+            });
+        });
+
+
+    $(document).ready(function(){
+        $('.dropdown-toggle').dropdown()
+    });
+
+
+</script>
+{% block content %}
+{% endblock %}
 </body>
 </html>
