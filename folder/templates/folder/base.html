@@ -43,7 +43,7 @@
                                     <center><i class="material-icons" style="font-size:24px; color: #4267b2;">insert_emoticon</i>
                                     </center>
                                     <p></p>
-                                    <form class='' method='POST' action=''>{% csrf_token %}
+                                    <form class='' method='POST' action='{% url "login" %}'>{% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-groups">
                                                 <input style="border-radius: 4px;" type="text" class="form-control"

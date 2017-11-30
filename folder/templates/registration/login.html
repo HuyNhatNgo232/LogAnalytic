@@ -1,0 +1,27 @@
+{% extends 'folder/base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+        <center>
+            <h1>Login</h1>
+        </center>
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-4'>
+        <form method="post" action=".">
+          {% csrf_token %}
+          {{ form|crispy }}
+            <div class="form-group">
+                <input type="submit" class='btn btn-primary' value="Login" id="loginButton"/>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </form>
+    </div>
+</div>
+        <hr/>
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-5 text-align-center'>
+        <p>{% trans "Don't have an account?" %}? <a href="">{% trans "Register" %}</a>!</p>
+    </div>
+</div>
+{% endblock %}
