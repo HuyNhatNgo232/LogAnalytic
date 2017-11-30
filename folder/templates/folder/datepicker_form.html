@@ -1,0 +1,20 @@
+{% extends 'folder/base.html' %}
+
+{% block content %}
+{{ form.media }}
+
+<div class="container">
+    <div id="form-demo" class="row-field">
+        {% if form %}
+        <form id="dateTimeExample" action="" method="POST" class="form-group">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <br/>
+            <input id="submit" type="submit" value="Submit" class="btn">
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
