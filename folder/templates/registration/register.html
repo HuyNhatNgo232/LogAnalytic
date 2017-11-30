@@ -1,0 +1,26 @@
+{% extends "folder/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<center>
+    <h2>Welcome to Cognitive Analytics</h2><br>
+</center>
+<div class='row' id="registerDiv">
+    <div class='col-sm-200 col-sm-offset-4'>
+        <form class="" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group" id="registerForm">
+                <span class="text-danger small">{{ field.errors }}</span>
+                <div class="">{{ field.label}}</div>
+                <div class="">{{ field }}</div>
+            </div>
+            {% endfor %}
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" id="registerButton">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

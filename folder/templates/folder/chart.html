@@ -1,0 +1,279 @@
+{% extends "folder/base.html" %}
+
+<script>
+{% block jquery %}
+var endpoint = '/api/chart/data/'
+
+var defaultData = []
+var labels = [];
+
+$.ajax({
+    method: "GET",
+    url: endpoint,
+    success: function(data){
+        labels = data.labels
+        volume = data.volume
+        controller_label = data.controllerlb
+        controller_volume = data.controllervolume
+
+        setChart()
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+
+
+function setChart(){
+
+
+    let myChart = document.getElementById("myChart").getContext('2d');
+
+    let itemChart = new Chart(myChart, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Volume',
+                data: volume,
+                backgroundColor: [
+                    'rgba(233, 92, 92,0.2)',
+                    'rgba(233, 156, 92,0.2)',
+                    'rgba(233, 231, 92,0.2)',
+                    'rgba(184, 233, 92,0.2)',
+                    'rgba(92, 233, 104,0.2)',
+                    'rgba(92, 233, 205,0.2)',
+                    'rgba(92, 177, 233,0.2)',
+                    'rgba(92, 116, 233,0.2)',
+                    'rgba(153, 92, 233,0.2)',
+                    'rgba(205, 92, 233,0.2)',
+                    'rgba(233, 92, 177,0.2)',
+                    'rgba(233, 92, 94,0.2)'
+                ],
+
+                borderWidth: 2,
+
+                borderColor: [
+                    'rgba(233, 92, 92,1)',
+                    'rgba(233, 156, 92,1)',
+                    'rgba(233, 231, 92,1)',
+                    'rgba(184, 233, 92,1)',
+                    'rgba(92, 233, 104,1)',
+                    'rgba(92, 233, 205,1)',
+                    'rgba(92, 177, 233,1)',
+                    'rgba(92, 116, 233,1)',
+                    'rgba(153, 92, 233,1)',
+                    'rgba(205, 92, 233,1)',
+                    'rgba(233, 92, 177,1)',
+                    'rgba(233, 92, 94,1)'
+                ],
+            },
+            ],
+        },
+
+
+
+        options: {
+            title: {
+                display: true,
+                text: 'Total Error Volume',
+                fontSize: 25,
+            },
+            scales: {
+                xAxes: [{
+                    stacked: false,
+                    beginAtZero: true,
+                    scaleLabel: {
+                        labelString: 'Month'
+                    },
+                    ticks: {
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false
+                    }
+                }]
+            },
+            animation: {
+                duration: 500,
+                onComplete: function () {
+                    // render the value of the chart above the bar
+                    var chart = this.chart
+                    var ctx = chart.ctx;
+                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                    ctx.fillStyle = this.chart.config.options.defaultFontColor;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'bottom';
+
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chart.getDatasetMeta(i)
+                        if (!meta.hidden) {
+                            for (var i = 0; i < dataset.data.length; i++) {
+                                var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                                ctx.fillText(dataset.data[i], model.x, model.y+3);
+                            }
+                        }
+                    });
+                }
+            }
+        },
+    });
+
+
+    <!--Compare part-->
+    let myChart1 = document.getElementById("myChart1").getContext('2d');
+
+    let itemChart1 = new Chart(myChart1, {
+        type: 'bar',
+        data: {
+            labels: controller_label,
+            datasets: [{
+                label: 'Volume',
+                data: controller_volume,
+                backgroundColor: [
+                    'rgba(233, 92, 92,0.2)',
+                    'rgba(233, 156, 92,0.2)',
+                    'rgba(233, 231, 92,0.2)',
+                    'rgba(184, 233, 92,0.2)',
+                    'rgba(92, 233, 104,0.2)',
+                    'rgba(92, 233, 205,0.2)',
+                    'rgba(92, 177, 233,0.2)',
+                    'rgba(92, 116, 233,0.2)',
+                    'rgba(153, 92, 233,0.2)',
+                    'rgba(205, 92, 233,0.2)',
+                    'rgba(233, 92, 177,0.2)',
+                    'rgba(233, 92, 94,0.2)'
+                ],
+
+                borderWidth: 2,
+
+                borderColor: [
+                    'rgba(233, 92, 92,1)',
+                    'rgba(233, 156, 92,1)',
+                    'rgba(233, 231, 92,1)',
+                    'rgba(184, 233, 92,1)',
+                    'rgba(92, 233, 104,1)',
+                    'rgba(92, 233, 205,1)',
+                    'rgba(92, 177, 233,1)',
+                    'rgba(92, 116, 233,1)',
+                    'rgba(153, 92, 233,1)',
+                    'rgba(205, 92, 233,1)',
+                    'rgba(233, 92, 177,1)',
+                    'rgba(233, 92, 94,1)'
+                ],
+            },
+            ],
+        },
+
+
+
+        options: {
+            title: {
+                display: true,
+                text: 'Total Usage Volume',
+                fontSize: 25,
+            },
+            scales: {
+                xAxes: [{
+                    stacked: false,
+                    beginAtZero: true,
+                    scaleLabel: {
+                        labelString: 'Month'
+                    },
+                    ticks: {
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false
+                    }
+                }]
+            },
+            animation: {
+                duration: 500,
+                onComplete: function () {
+                    // render the value of the chart above the bar
+                    var chart = this.chart
+                    var ctx = chart.ctx;
+                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                    ctx.fillStyle = this.chart.config.options.defaultFontColor;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'bottom';
+
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chart.getDatasetMeta(i)
+                        if (!meta.hidden) {
+                            for (var i = 0; i < dataset.data.length; i++) {
+                                var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                                ctx.fillText(dataset.data[i], model.x, model.y+3);
+                            }
+                        }
+                    });
+                }
+            }
+        },
+    });
+}
+
+{% endblock %}
+
+
+</script>
+
+
+{% block content %}
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Charts</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+
+        <!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Total Volume Error
+                </div>
+                <!-- /.panel-heading -->
+                <div class='col-sm-20' url-endpoint='{% url "api-data" %}'>
+                    <div class='col-sm-12'>
+                        <canvas id="myChart" width="200" height="200"></canvas>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Total Volume Usage
+                </div>
+                <!-- /.panel-heading -->
+                <div class='col-sm-20' url-endpoint='{% url "api-data" %}'>
+                    <div class='col-sm-12'>
+                        <canvas id="myChart1" width="200" height="200"></canvas>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+
+        <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+</div>
+
+{% endblock %}
+
+$(document).click(function(e) {
+if (!$(e.target).is('a')) {
+$('.collapse').collapse('hide');
+}
+});
