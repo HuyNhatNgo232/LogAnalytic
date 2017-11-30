@@ -53,11 +53,11 @@
         <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="255">
-                <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+              <first_editor relative-caret-position="281">
+                <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
                 <folding />
               </first_editor>
-              <second_editor relative-caret-position="0">
+              <second_editor relative-caret-position="-105">
                 <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </second_editor>
@@ -471,11 +471,11 @@
     <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+          <first_editor relative-caret-position="281">
+            <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
             <folding />
           </first_editor>
-          <second_editor relative-caret-position="0">
+          <second_editor relative-caret-position="-105">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </second_editor>
