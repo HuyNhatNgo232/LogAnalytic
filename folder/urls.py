@@ -16,4 +16,20 @@ urlpatterns = [
     url(r'^item/(?P<pk>\d+)/approve/$', views.item_approve, name='item_approve'),
     # remove Item
     url(r'^item/(?P<pk>\d+)/remove/$', views.item_remove, name='item_remove'),
+    # show Item chart
+    url(r'^chart/(?P<pk>\d+)$', views.ItemChart.as_view(), name='item_chart'),
+    # api don't understand yet
+    url(r'^api/data/$', views.get_data, name='api-data'),
+
+    url(r'^api/chart/data/$', views.ChartData.as_view()),
+
+    # Show Time Series
+    url(r'^timeseries/$', views.TimeSeries.as_view(), name='time_series'),
+
+    url(r'^api/time/$', views.get_data, name='api-time'),
+
+    url(r'^api/time/data/$', views.TimeSeriesData.as_view()),
+
+    url(r'^timeseries/date/$', views.DatePickerView, name='datetime_picker'),
+
 ]

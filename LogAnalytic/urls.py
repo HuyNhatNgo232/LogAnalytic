@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_view
+from folder import views
 
 
 urlpatterns = [
@@ -23,5 +24,7 @@ urlpatterns = [
     url(r'^', include('folder.urls')),
     url(r'^accounts/login/$', auth_view.login, name='login'),
     url(r'^accounts/logout/$', auth_view.logout, name='logout', kwargs={'next_page': '/'}),
-
+    url(r'^register/$', views.UserRegisterFormView.as_view(), name='register'),
+    url(r'^change_password/$', views.change_password, name='change_password'),
+    url(r'^about/$', views.AboutPage, name='about')
 ]

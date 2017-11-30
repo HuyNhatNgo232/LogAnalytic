@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64496b03-cc8c-4409-8c0e-eecb01d6b65e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/folder/templates/folder/index.html" afterPath="$PROJECT_DIR$/folder/templates/folder/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LogAnalytic/settings.py" afterPath="$PROJECT_DIR$/LogAnalytic/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LogAnalytic/urls.py" afterPath="$PROJECT_DIR$/LogAnalytic/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/folder/forms.py" afterPath="$PROJECT_DIR$/folder/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/folder/models.py" afterPath="$PROJECT_DIR$/folder/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/folder/urls.py" afterPath="$PROJECT_DIR$/folder/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/folder/views.py" afterPath="$PROJECT_DIR$/folder/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,40 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/folder/models.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                <folding>
-                  <element signature="e#0#39#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="592">
-                <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/folder/templates/folder/base.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,8 +49,8 @@
         <entry file="file://$PROJECT_DIR$/folder/urls.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="255">
-                <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+              <first_editor relative-caret-position="525">
+                <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                 <folding>
                   <element signature="e#0#32#0" expanded="true" />
                 </folding>
@@ -91,13 +63,65 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/folder/tests.py">
+          <provider selected="true" editor-type-id="live-pycharm">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/folder/models.py">
+          <provider selected="true" editor-type-id="live-pycharm">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="637">
+                <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+                <folding>
+                  <element signature="e#24#63#0" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor relative-caret-position="-53">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/folder/views.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-743">
-                <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+              <first_editor relative-caret-position="90">
+                <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
                 <folding />
+              </first_editor>
+              <second_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/folder/forms.py">
+          <provider selected="true" editor-type-id="live-pycharm">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="577">
+                <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+                <folding>
+                  <element signature="e#0#24#0" expanded="true" />
+                </folding>
               </first_editor>
               <second_editor relative-caret-position="-105">
                 <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -107,32 +131,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="folder_confirm_delete.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/folder/templates/folder/folder_confirm_delete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
+          <provider selected="true" editor-type-id="live-pycharm">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="605">
+                <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+                <folding />
+              </first_editor>
+              <second_editor relative-caret-position="-70">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </second_editor>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="folder_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/folder/templates/folder/folder_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/folder/templates/folder/item_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogAnalytic/urls.py">
+          <provider selected="true" editor-type-id="live-pycharm">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="285">
+                <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                <folding>
+                  <element signature="e#644#685#0" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -152,10 +180,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/folder/templates/folder/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
+            <state relative-caret-position="-533">
               <caret line="69" column="45" lean-forward="true" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -180,6 +208,7 @@
     <findStrings>
       <find>time_ser</find>
       <find>t</find>
+      <find>about</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,21 +221,21 @@
         <option value="$PROJECT_DIR$/folder/static/folder/style.css" />
         <option value="$PROJECT_DIR$/mysql2pgsql.yml" />
         <option value="$PROJECT_DIR$/folder/templates/folder/base/js.html" />
-        <option value="$PROJECT_DIR$/LogAnalytic/urls.py" />
         <option value="$PROJECT_DIR$/folder/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/folder/admin.py" />
-        <option value="$PROJECT_DIR$/folder/forms.py" />
         <option value="$PROJECT_DIR$/folder/validators.py" />
-        <option value="$PROJECT_DIR$/folder/models.py" />
-        <option value="$PROJECT_DIR$/LogAnalytic/settings.py" />
         <option value="$PROJECT_DIR$/folder/templates/folder/folder_confirm_delete.html" />
         <option value="$PROJECT_DIR$/folder/templates/folder/folder_form.html" />
         <option value="$PROJECT_DIR$/folder/templates/folder/item_form.html" />
-        <option value="$PROJECT_DIR$/folder/views.py" />
-        <option value="$PROJECT_DIR$/folder/urls.py" />
         <option value="$PROJECT_DIR$/folder/templates/folder/folder_detail.html" />
         <option value="$PROJECT_DIR$/folder/templates/folder/base.html" />
         <option value="$PROJECT_DIR$/folder/templates/folder/index.html" />
+        <option value="$PROJECT_DIR$/folder/views.py" />
+        <option value="$PROJECT_DIR$/LogAnalytic/settings.py" />
+        <option value="$PROJECT_DIR$/LogAnalytic/urls.py" />
+        <option value="$PROJECT_DIR$/folder/urls.py" />
+        <option value="$PROJECT_DIR$/folder/models.py" />
+        <option value="$PROJECT_DIR$/folder/forms.py" />
       </list>
     </option>
   </component>
@@ -415,22 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LogAnalytic/urls.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-            <folding>
-              <element signature="e#644#685#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/folder/admin.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state split_layout="FIRST">
@@ -438,22 +451,6 @@
             <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
             <folding>
               <element signature="e#24#63#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/folder/forms.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#24#0" expanded="true" />
             </folding>
           </first_editor>
           <second_editor relative-caret-position="0">
@@ -477,34 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/folder/tests.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="592">
-            <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/folder/templates/folder/folder_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -518,52 +487,6 @@
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/folder/models.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#39#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/folder/views.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-743">
-            <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/folder/urls.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
-            <folding>
-              <element signature="e#0#32#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -614,13 +537,119 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/folder/templates/folder/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="-533">
           <caret line="69" column="45" lean-forward="true" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#aside#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/folder/views.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <folding />
+          </first_editor>
+          <second_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="605">
+            <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <folding />
+          </first_editor>
+          <second_editor relative-caret-position="-70">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogAnalytic/urls.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <folding>
+              <element signature="e#644#685#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/folder/urls.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="525">
+            <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <folding>
+              <element signature="e#0#32#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/folder/tests.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/folder/models.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="637">
+            <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <folding>
+              <element signature="e#24#63#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor relative-caret-position="-53">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/folder/forms.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="577">
+            <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <folding>
+              <element signature="e#0#24#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor relative-caret-position="-105">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </second_editor>
         </state>
       </provider>
     </entry>

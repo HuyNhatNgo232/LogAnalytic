@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'folder',
+    'django.contrib.humanize',
+    'rest_framework',
     'crispy_forms',
+    'datetimewidget',
 
 ]
 

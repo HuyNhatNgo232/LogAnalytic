@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils import timezone
 from django.core.urlresolvers import reverse
+from django.utils import timezone
 from .validators import validate_file_extension
+import hashlib
+import os
 
 
 
@@ -23,6 +26,7 @@ class Folder(models.Model):
 
     def get_absolute_url(self):
         return reverse("folder_detail", kwargs={'pk': self.pk})
+
 
 class Item(models.Model):
     name = models.CharField(max_length=200)
