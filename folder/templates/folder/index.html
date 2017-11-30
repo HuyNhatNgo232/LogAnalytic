@@ -1,1 +1,142 @@
 {% extends 'folder/base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<br>
+<table class="table table-bordered" border="1" id="myTable">
+    <thead>
+    <tr>
+        <th onclick="sortTable(0)">Folder Name</th>
+        <th onclick="sortTable(2)">File</th>
+        <th onclick="sortTable(1)">Created Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for folder in folder_list %}
+    {% if folder.created_by == user %}
+    <tr>
+        <td><a href="{% url 'folder_detail' pk=folder.pk %}">{{folder.title}}</a></td>
+        <td>{{folder.item.count}}</td>
+        <td>{{folder.created_date}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% if not user.is_authenticated %}
+<header class="intro-header">
+    <div class="container">
+        <div class="intro-message">
+            <h1>Cognitive Analytics</h1>
+            <h3>Making your data readable.</h3>
+            <hr class="intro-divider">
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<section class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5"><span class="pull right"></span>
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">What is the Cognitive Analytics service?</h2>
+                <p class="lead">We are a specialized service that allows instant analytics on
+                    data you provide. If you would like to learn more about our service before registering,
+                    please click <a href="{%url 'about' %}">here.</a>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="static/img/data_exm.jpg" style="width:400px;height:300px;" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+
+<section class="content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5"><span class="pull left"></span>
+                <img class="img-fluid" src="static/img/IMG_0821.jpg" style="width:400px;height:300px;" alt="">
+            </div>
+            <div class="col-sm-5">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Meet the team!</h2>
+                <p class="lead">If you would like to learn more about the team please click
+                    <a target="_blank" href="{%url 'about' %}">here.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /.content-section-b -->
+
+<section class="content-section-c">
+
+    <!--
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">...<br>...</h2>
+          <p class="lead">...
+            <a target="_blank" href="http://www.google.com/fonts">...</a>...
+            <a target="_blank" href="http://fontawesome.io">...</a>.</p>
+        </div>
+        <div class="col-lg-5 mr-auto ">
+          <img class="img-fluid" src="img/image.png" alt="">
+        </div>
+      </div>
+    </div>
+    -->
+    <!-- /.container -->
+
+</section>
+<!-- /.content-section-a -->
+
+<aside class="banner">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 my-auto">
+                <h2 style="color: black">Connect with us on social media.</h2>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fa fa-twitter fa-fw"></i>
+                            <span class="network-name">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fa fa-github fa-fw"></i>
+                            <span class="network-name">Github</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fa fa-linkedin fa-fw"></i>
+                            <span class="network-name">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</aside>
+<!-- /.banner -->
+{% endif %}
+{% endblock %}

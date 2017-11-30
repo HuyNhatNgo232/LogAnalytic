@@ -3,5 +3,57 @@
 {%block title%}{{folder}}{%endblock%}
 
 {%block content%}
-test detail
+
+
+<div class="container">
+    <h2>{{folder}}</h2>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <ul class="list-group" id="myList">
+        {% for item in folder.item.all %}
+        {% if user.is_authenticated and item.approved_item %}
+        <li class="list-group-item">{{item.name | capfirst}}
+            <a href="{% url 'item_remove' pk=item.pk %}" class="badge" style="background-color: #4267b2;">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp; Delete File
+            </a>
+        </li>
+        {% endif%}
+        {% endfor %}
+    </ul>
+</div>
+
+{% for item in folder.item.all %}
+{% if user.is_authenticated or item.approved_item %}
+{% if not item.approved_item %}
+<center>
+    <h4>
+        Do you want add {{item.title}} to your {{folder}}?<br><br>
+        <a class="btn btn-default" href="{% url 'item_approve' pk=item.pk %}"
+           style="background-color: #4267b2; color: white;">
+            Add
+        </a>
+        <a class="btn btn-default" href="{% url 'item_remove' pk=item.pk %}"
+           style="background-color: #4267b2; color: white;">
+            Remove
+        </a>
+    </h4>
+</center>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+
+</script>
 {%endblock%}
