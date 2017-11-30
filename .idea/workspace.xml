@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64496b03-cc8c-4409-8c0e-eecb01d6b65e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LogAnalytic/settings.py" afterPath="$PROJECT_DIR$/LogAnalytic/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="339">
-                <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+              <first_editor relative-caret-position="151">
+                <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
                 <folding>
                   <element signature="e#313#322#0" expanded="true" />
                 </folding>
@@ -474,8 +473,8 @@
     <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="339">
-            <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+          <first_editor relative-caret-position="151">
+            <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
             <folding>
               <element signature="e#313#322#0" expanded="true" />
             </folding>
