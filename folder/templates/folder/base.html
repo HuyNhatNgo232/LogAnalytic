@@ -6,11 +6,87 @@
     {% load staticfiles %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{% static 'folder/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'folder/style.css' %}"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{%url 'folder_list' %}">Keep It Simple</a>
+        </div>
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active">
+                    <a href="" id="about">
+                        <span class="glyphicon glyphicon-adjust" aria-hidden="true"></span> About
+                    </a>
+                </li>
+                <li>
+                    <a class="homepage_login" href="#" id="myBtn"> Log in</a>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog" style="top: 150px;">
 
+                            <!-- Modal content-->
+                            <div class="modal-content" style="width:600px;">
+                                <div class="modal-header" style="padding:5px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <center><h4><span class=""></span>Log in to Cognitive Analytics</h4></center>
+                                </div>
+                                <div class="modal-body" style="padding:20px 50px;">
+                                    <center><i class="material-icons" style="font-size:24px; color: #4267b2;">insert_emoticon</i>
+                                    </center>
+                                    <p></p>
+                                    <form class='' method='POST' action=''>{% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-groups">
+                                                <input style="border-radius: 4px;" type="text" class="form-control"
+                                                       name="username" id="username" placeholder="Username" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-groups">
+                                                <input style="border-radius: 4px;" type="password" class="form-control"
+                                                       name="password" id="password" placeholder="Password" required>
+                                            </div>
+                                        </div>
+                                        <div class="checkbox">
+                                            <center>
+                                                <label>
+                                                    <input type="checkbox" value="" checked>
+                                                    <span>Remember me</span>
+                                                </label>
+
+                                                <span class="separator">·</span>
+                                                <a style="color: #4267b2; text-decoration: none;" class="forgot"
+                                                   href="#" rel="noopener">Forgot password?</a>
+                                            </center>
+                                        </div>
+                                        <button id="login_button" type="submit" class="btn-block"><span
+                                                class="glyphicon glyphicon-off"></span> Login
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="LoginDialog-footer modal-footer u-textCenter">
+                                    <center>
+                                        Don't have an account?
+                                        <a style="color: #4267b2;" class="LoginDialog-signupLink"
+                                           href="" rel="noopener">Sign up »</a>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 </body>
 </html>
