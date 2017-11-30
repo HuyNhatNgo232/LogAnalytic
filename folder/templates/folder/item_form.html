@@ -1,0 +1,16 @@
+{% extends 'folder/base.html' %}
+
+{% block content %}
+<h1>New Item</h1>
+<form method="POST" class="post-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-group" id="registerForm">
+        <span class="text-danger small">{{field.errors }}</span>
+        <div class="" id="">{{field.label}}:</div>
+        <div class="">{{ field }}</div>
+    </div>
+    {% endfor%}
+    <button type="submit" class="save btn btn-default">Upload Item</button>
+</form>
+{% endblock %}

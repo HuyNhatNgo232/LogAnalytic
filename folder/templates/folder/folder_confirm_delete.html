@@ -1,0 +1,17 @@
+{% extends "folder/base.html" %}
+
+{% block content %}
+<br>
+<!--<form action="" method="post">{% csrf_token %}-->
+<!--<p>Are you sure you want to delete "{{ object }}"?</p>-->
+<!--<input type="submit" value="Confirm"/>-->
+<!--</form>-->
+
+<div class='col-sm-200 col-sm-offset-4'>
+    <form class="" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <p> <h3>A re you sure you want to delete "{{ object }}"? </h3> </p>
+        <input type="submit" id="submitDelete" value="Confirm"/>
+        <a class="btn btn-default" id="cancelDelete" href="{% url 'folder_detail' pk=folder.pk%}"><strong>Cancel</strong></a>
+    </form>
+</div>
+{% endblock %}

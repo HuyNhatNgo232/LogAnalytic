@@ -23,6 +23,89 @@
         </div>
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <!--{% if request.path == "/timeseries/" %}-->
+                <!--<li>-->
+                    <!--<a href="{% url 'datetime_picker' %}">Pick Date</a>-->
+                <!--</li>-->
+                <!--{% endif %}-->
+                <!--- add user settings here -->
+                {% if folder.pk > 0 %}
+                {% if not request.path == '/folder/new/' %}
+                <li class="dropdown">
+                    <a id="folder" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="">
+                            <a href="{% url 'add_item_to_folder' pk=folder.pk %}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add File
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="">
+                            <a href="{% url 'time_series' %}">
+                                <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp; Time Series
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="">
+                            <a id="addNewFolder0" href="{%url 'folder_new' %}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Folder
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'folder_edit' pk=folder.pk %}">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp; Edit Folder
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'folder_remove' pk=folder.pk %}">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp; Delete Folder
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {% endif %}
+                {% else %}
+                <li class="active">
+                    <a id="addNewFolder" href="{%url 'folder_new' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Folder
+                    </a>
+                </li>
+                {% endif %}
+                <li class="dropdown">
+                    <a id="userpage" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="">
+                            <a href="#">
+                                <span class="" aria-hidden="true"></span>Profile
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                <span class="" aria-hidden="true"></span>Change Password
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <span class="" aria-hidden="true"></span>Settings
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="">
+                            <a href="{% url 'logout' %}">
+                                <span class="" aria-hidden="true"></span>Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {% endif %}
+                {% if not request.user.is_authenticated and not "/accounts/login" in request.get_full_path %}
                 <li class="active">
                     <a href="" id="about">
                         <span class="glyphicon glyphicon-adjust" aria-hidden="true"></span> About
@@ -84,6 +167,8 @@
                         </div>
                     </div>
                 </li>
+                {% endif %}
+
             </ul>
         </div>
     </div>
@@ -109,6 +194,10 @@
     $(document).ready(function(){
         $('.dropdown-toggle').dropdown()
     });
+
+
+
+
 
 
 </script>
