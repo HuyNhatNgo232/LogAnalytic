@@ -53,13 +53,11 @@
         <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="151">
-                <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-                <folding>
-                  <element signature="e#313#322#0" expanded="true" />
-                </folding>
+              <first_editor relative-caret-position="585">
+                <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+                <folding />
               </first_editor>
-              <second_editor relative-caret-position="-105">
+              <second_editor relative-caret-position="0">
                 <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </second_editor>
@@ -473,13 +471,11 @@
     <entry file="file://$PROJECT_DIR$/LogAnalytic/settings.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="151">
-            <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-            <folding>
-              <element signature="e#313#322#0" expanded="true" />
-            </folding>
+          <first_editor relative-caret-position="585">
+            <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <folding />
           </first_editor>
-          <second_editor relative-caret-position="-105">
+          <second_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </second_editor>
