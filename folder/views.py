@@ -93,6 +93,8 @@ class DeleteFolderView(DeleteView):
 
 def data(current_user_id):
 
+    global file_up_name
+
     if file_up_name.__contains__(" "):
         file_up_name = file_up_name.replace(" ","_")
     global file_up_name
