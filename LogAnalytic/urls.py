@@ -26,5 +26,4 @@ urlpatterns = [
     url(r'^accounts/logout/$', auth_view.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'^register/$', views.UserRegisterFormView.as_view(), name='register'),
     url(r'^change_password/$', views.change_password, name='change_password'),
-    url(r'^about/$', views.AboutPage, name='about')
 ]

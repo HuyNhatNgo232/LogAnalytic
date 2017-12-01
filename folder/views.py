@@ -31,9 +31,6 @@ user_id = ''
 start = ''
 end = ''
 
-def AboutPage(request):
-    return render(request, 'folder/about.html')
-
 class IndexView(ListView):
     template_name = 'folder/index.html'
     context_object_name = 'folder_list'
