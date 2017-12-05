@@ -2,6 +2,6 @@ def validate_file_extension(value):
     import os
     from django.core.exceptions import ValidationError
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
-    if not ext[1].isdigit():
+    if not ext[1].isdigit() or ext == ".txt":
         raise ValidationError(u'Unsupported file extension.')
 
