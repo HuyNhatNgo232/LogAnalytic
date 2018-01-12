@@ -42,8 +42,6 @@ class IndexView(ListView):
         global end
         start = ""
         end = ""
-        print user_id
-        print "main view"
         return Folder.objects.all()
 
 
@@ -55,12 +53,10 @@ class FolderDetailView(DetailView):
 
 class MyFolder(IndexView):
     def get_queryset(self):
-        print "something"
         return Folder.objects.filter(created_by=self.request.user.id)
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        print "dispatch"
         return super(MyFolder, self).dispatch(*args, **kwargs)
 
 
@@ -793,8 +789,6 @@ def unmerge_time_series_csv(destination, source, itemID_to_delete):
             new_line = lines[i][16:].split(',')
             # Subtract the error volumes from the new line to the old line.
             for j in range(len(old_line)):
-                print old_line[j]
-                print new_line[j]
                 new_volume_count = int(old_line[j]) - int(new_line[j])
                 if new_volume_count < 0:
                     pass
@@ -978,9 +972,6 @@ class ChartData(APIView):
     permission_classes = []
 
     def get(self, request, format=None, ):
-        print request
-        print 'get-data-3'
-
         count = 0
         list_error = ''
         all_data = []
@@ -1091,14 +1082,8 @@ class TimeSeriesData(APIView):
         start_day = convertDate(get_start_day)
         end_day = convertDate(get_end_day)
 
-        print start_day
-        print end_day
-
         file_name = 'user_' + str(user_id) + '_time_series' + ".csv"
-        print file_name
         lines = open(file_name, 'r')
-        print "mo file"
-
         master_error_list = ['Date', 'AccessDeniedException', 'HttpClientErrorException', 'RuntimeException',
                              'RemoteException',
                              'UnknownHostException', 'ExceptionTranslator', 'ExceptionTranslationFilter',
